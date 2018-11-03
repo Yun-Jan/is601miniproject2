@@ -6,18 +6,16 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Car;
-class CarUpdateTest extends TestCase
+class CarDeleteTest extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testCarUpdateTest()
+    public function testECarDeleteTest()
     {
-        $car= factory(Car::class)->create();
-        $car->Year='2000';
-        $car->save();
-        $this->assertTrue($car->update());
+        $car =Car::find(1);
+        $this->assertTrue($car->delete());
     }
 }
