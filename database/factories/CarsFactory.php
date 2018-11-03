@@ -2,9 +2,9 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Car::class, function (Faker $faker) {
     return [
-        'Make' => $faker->randomElement($array = array ('Ford','Honda','Toyota')), 
+        'Make' => $faker->randomElement($array = array ('Ford','Honda','Toyota')),
         'Model' => $faker->text,
         'Year' => $faker->year($max = 'now'),
     ];
