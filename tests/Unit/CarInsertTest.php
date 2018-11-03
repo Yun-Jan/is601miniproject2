@@ -5,18 +5,18 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\User;
+use App\Car;
 
-class UserDeleteTest extends TestCase
+class CarInsertTest extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testUserDeleteTest()
+    public function testExample()
     {
-        $user = User::find(1);
-        $this->assertTrue($user->delete());
+        $car = factory(Car::class)->create();
+        $this->assertTrue($car->save());
     }
 }
